@@ -12,11 +12,11 @@ function User(firstName, lastName, email, phoneNumber, password) {
 let submit = function() {
     let password = document.getElementById("password ").value;
     let confirmPassword = document.getElementById("confirmPassword ").value;
-    if (password != confirmPassword) {
+    if (password != confirmPassword && password.length < 8) {
         document.getElementById("password ").className = "error";
         document.getElementById("confirmPassword ").className = "error";
-        alert("Passwords must match!")
-    } else if (password == confirmPassword) {
+        alert("Passwords must match and be at least 8 characters!")
+    } else if (password == confirmPassword && password.length > 8) {
         let fName = document.getElementById("fName").value
         fName = new User(document.getElementById("fName").value, document.getElementById("lName ").value, document.getElementById("email ").value, document.getElementById("phoneNumber ").value, document.getElementById("password ").value);
         login(fName);
