@@ -2,23 +2,31 @@ body {
     background-color: gainsboro;
     display: flex;
     margin: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
-#image {
-    width: 40%;
+#imageContainer {
+    width: 40vw;
     height: 100vh;
     background-color: black;
 }
 
+#image {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
 #credit {
     color: rgba(255, 255, 255, 0.556);
-    position: absolute;
-    bottom: 5%;
-    left: 15%;
+    position: relative;
+    bottom: 15%;
+    left: 30%;
 }
 
 #container {
-    width: 60%;
+    width: 60vw;
     display: flex;
     flex-direction: column;
 }
@@ -29,11 +37,11 @@ body {
 }
 
 #upperContainer {
-    height: 30%;
+    height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: clamp(1.25rem, 1.5rem, 1.75rem);
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
@@ -43,14 +51,13 @@ body {
 }
 
 #middleContainer {
-    height: 30%;
+    height: 30vh;
     background-color: whitesmoke;
 }
 
 #formContainer {
     margin-left: 20px;
     width: 80%;
-    height: 72%;
 }
 
 #form {
@@ -94,17 +101,17 @@ button {
 }
 
 #bottomContainer {
-    height: 40%;
+    height: 40vh;
 }
 
 #overlay {
     background-color: rgba(0, 0, 0, 0.679);
-    width: 40%;
-    height: 20%;
-    position: absolute;
-    left: 0%;
-    top: 30%;
-    font-size: 4rem;
+    width: 100%;
+    height: 10%;
+    z-index: 1;
+    position: relative;
+    bottom: 60%;
+    font-size: clamp(2rem, 3rem, 50%);
     color: white;
     justify-content: center;
     display: flex;
